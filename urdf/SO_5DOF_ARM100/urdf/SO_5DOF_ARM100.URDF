@@ -3,7 +3,7 @@
      Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="SO_5DOF_ARM100_8j_URDF.SLDASM">
+  name="SO_5DOF_ARM100">
   <link
     name="Base">
     <inertial>
@@ -96,6 +96,11 @@
       link="Rotation_Pitch" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="Upper_Arm">
@@ -149,6 +154,12 @@
       link="Upper_Arm" />
     <axis
       xyz="1 0 0" />
+    1.57
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="Lower_Arm">
@@ -202,6 +213,11 @@
       link="Lower_Arm" />
     <axis
       xyz="1 0 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="Wrist_Pitch_Roll">
@@ -255,6 +271,11 @@
       link="Wrist_Pitch_Roll" />
     <axis
       xyz="1 0 0" />
+    <limit
+      lower="-180"
+      upper="0"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="Fixed_Jaw">
@@ -308,6 +329,11 @@
       link="Fixed_Jaw" />
     <axis
       xyz="0 1 0" />
+    <limit
+      lower="-90"
+      upper="90"
+      effort="0"
+      velocity="0" />
   </joint>
   <link
     name="Moving Jaw">
@@ -361,5 +387,10 @@
       link="Moving Jaw" />
     <axis
       xyz="0 0 1" />
+    <limit
+      lower="0"
+      upper="90"
+      effort="0"
+      velocity="0" />
   </joint>
 </robot>
